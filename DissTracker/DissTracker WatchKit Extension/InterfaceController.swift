@@ -11,11 +11,18 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    @IBOutlet var totalServedLbl: WKInterfaceLabel!
+    let staticStrings = strings()
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+        if let totalServed = UserDefaults.standard.object(forKey: staticStrings.total_disses_served) as? Int {
+            print(totalServed.description)
+            totalServedLbl.setText(totalServed.description)
+        }
     }
     
     override func willActivate() {

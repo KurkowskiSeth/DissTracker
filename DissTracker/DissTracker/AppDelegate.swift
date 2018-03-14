@@ -7,15 +7,31 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var session: WCSession? {
+        didSet{
+            if let session = session {
+                session.delegate = self
+                session.activate()
+            }
+        }
+    }
+    
+    let staticStrings = strings()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if WCSession.isSupported() {
+            session = WCSession.default
+        }
+        
         return true
     }
 
@@ -40,7 +56,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
-
+extension AppDelegate: WCSessionDelegate {
+    func sessionDidDeactivate(_ session: WCSession) {
+    }
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        DispatchQueue.main.async {
+            if (message[staticStrings.wcsession_message_name] as? Bool) != nil {
+                
+            }
+        }
+    }
 }
 

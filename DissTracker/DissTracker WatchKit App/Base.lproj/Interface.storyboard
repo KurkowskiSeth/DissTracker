@@ -12,7 +12,17 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DissTracker_WatchKit_App" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DissTracker_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Total" textAlignment="center" id="f6V-Jf-HdQ"/>
+                        <label alignment="left" text="0" textAlignment="center" id="rld-sm-Cqd"/>
+                        <button width="1" alignment="left" title="Diss Served" id="2my-0q-Qp5"/>
+                    </items>
+                    <connections>
+                        <outlet property="totalServedLbl" destination="rld-sm-Cqd" id="eSq-Y0-e4h"/>
+                        <segue destination="0aO-zr-9Vc" kind="relationship" relationship="nextPage" id="uzF-10-QKo"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -31,6 +41,19 @@
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Xvw-W6-kkf">
+            <objects>
+                <controller id="0aO-zr-9Vc">
+                    <items>
+                        <label alignment="left" text="Total" id="TRN-QC-bIz"/>
+                        <label alignment="left" text="0" id="cUl-ru-P3q"/>
+                        <button width="1" alignment="left" title="Diss Received" id="jdL-0d-OlQ"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">

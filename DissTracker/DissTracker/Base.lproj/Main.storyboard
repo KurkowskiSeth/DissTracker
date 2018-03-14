@@ -118,7 +118,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSW-iW-KZm">
                                 <rect key="frame" x="64" y="385" width="247" height="247"/>
-                                <state key="normal" title="Diss Recieved"/>
+                                <state key="normal" title="Diss Received"/>
                                 <connections>
                                     <action selector="DissRecieved:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpj-OD-TDq"/>
                                 </connections>
@@ -178,14 +178,22 @@
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
                     <connections>
+                        <outlet property="receivedDaily_NUM" destination="Aye-I2-0tK" id="EGJ-Fa-dvu"/>
+                        <outlet property="receivedMonthly_NUM" destination="TtH-wE-NUE" id="6X3-eU-bjV"/>
+                        <outlet property="receivedTotal_NUM" destination="iLW-dc-miP" id="aQU-bb-WnH"/>
+                        <outlet property="receivedYearly_NUM" destination="irX-Tm-BqI" id="wfW-CR-ta3"/>
                         <outlet property="recievedDaily" destination="tFV-xI-b61" id="0fl-x3-Bo4"/>
                         <outlet property="recievedMonthly" destination="agE-eU-tpT" id="flX-U7-E8G"/>
                         <outlet property="recievedTotal" destination="L4Z-7r-WKg" id="DpS-eN-cHl"/>
                         <outlet property="recievedYearly" destination="kup-ib-g5P" id="xc5-7o-BOD"/>
                         <outlet property="servedDaily" destination="Xyt-y4-6ve" id="gx5-Rf-zWX"/>
+                        <outlet property="servedDaily_NUM" destination="PTw-jy-wwS" id="ifG-8l-Ebx"/>
                         <outlet property="servedMonthly" destination="VGm-hm-m5q" id="R7Y-X3-hdV"/>
+                        <outlet property="servedMonthly_NUM" destination="Lng-0A-sKv" id="oXl-aw-Pkm"/>
                         <outlet property="servedTotal" destination="nsY-dC-19M" id="C5c-tV-joU"/>
+                        <outlet property="servedTotal_NUM" destination="jzl-Gr-7Gg" id="btn-n6-SuQ"/>
                         <outlet property="servedYearly" destination="D8P-0l-JZb" id="KhE-f8-A7v"/>
+                        <outlet property="servedYearly_NUM" destination="Lwn-No-gai" id="CJv-lV-5cC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
