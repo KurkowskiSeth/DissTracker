@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0B2C35B2059872F00E22E4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2C35A2059872F00E22E4D /* AppDelegate.swift */; };
+		C0B2C35D2059872F00E22E4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2C35C2059872F00E22E4D /* ViewController.swift */; };
+		C0B2C3602059872F00E22E4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B2C35E2059872F00E22E4D /* Main.storyboard */; };
+		C0B2C3622059872F00E22E4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B2C3612059872F00E22E4D /* Assets.xcassets */; };
+		C0B2C3652059872F00E22E4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B2C3632059872F00E22E4D /* LaunchScreen.storyboard */; };
+		C0B2C36A2059872F00E22E4D /* DissTracker WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C0B2C3692059872F00E22E4D /* DissTracker WatchKit App.app */; };
+		C0B2C3702059872F00E22E4D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B2C36E2059872F00E22E4D /* Interface.storyboard */; };
+		C0B2C3722059872F00E22E4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B2C3712059872F00E22E4D /* Assets.xcassets */; };
+		C0B2C3792059872F00E22E4D /* DissTracker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C0B2C3782059872F00E22E4D /* DissTracker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C0B2C37E2059872F00E22E4D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2C37D2059872F00E22E4D /* InterfaceController.swift */; };
+		C0B2C3802059872F00E22E4D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2C37F2059872F00E22E4D /* ExtensionDelegate.swift */; };
+		C0B2C3822059872F00E22E4D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2C3812059872F00E22E4D /* NotificationController.swift */; };
+		C0B2C3842059872F00E22E4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B2C3832059872F00E22E4D /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0B2C36B2059872F00E22E4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0B2C34F2059872F00E22E4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0B2C3682059872F00E22E4D;
+			remoteInfo = "DissTracker WatchKit App";
+		};
+		C0B2C37A2059872F00E22E4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0B2C34F2059872F00E22E4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0B2C3772059872F00E22E4D;
+			remoteInfo = "DissTracker WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0B2C38C2059872F00E22E4D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C0B2C3792059872F00E22E4D /* DissTracker WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B2C3902059872F00E22E4D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C0B2C36A2059872F00E22E4D /* DissTracker WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C0B2C3572059872F00E22E4D /* DissTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DissTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B2C35A2059872F00E22E4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C0B2C35C2059872F00E22E4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0B2C35F2059872F00E22E4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0B2C3612059872F00E22E4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0B2C3642059872F00E22E4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C0B2C3662059872F00E22E4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0B2C3692059872F00E22E4D /* DissTracker WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DissTracker WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B2C36F2059872F00E22E4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C0B2C3712059872F00E22E4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0B2C3732059872F00E22E4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0B2C3782059872F00E22E4D /* DissTracker WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DissTracker WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B2C37D2059872F00E22E4D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		C0B2C37F2059872F00E22E4D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		C0B2C3812059872F00E22E4D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		C0B2C3832059872F00E22E4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0B2C3852059872F00E22E4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0B2C3862059872F00E22E4D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0B2C3542059872F00E22E4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B2C3752059872F00E22E4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0B2C34E2059872F00E22E4D = {
+			isa = PBXGroup;
+			children = (
+				C0B2C3592059872F00E22E4D /* DissTracker */,
+				C0B2C36D2059872F00E22E4D /* DissTracker WatchKit App */,
+				C0B2C37C2059872F00E22E4D /* DissTracker WatchKit Extension */,
+				C0B2C3582059872F00E22E4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0B2C3582059872F00E22E4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0B2C3572059872F00E22E4D /* DissTracker.app */,
+				C0B2C3692059872F00E22E4D /* DissTracker WatchKit App.app */,
+				C0B2C3782059872F00E22E4D /* DissTracker WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0B2C3592059872F00E22E4D /* DissTracker */ = {
+			isa = PBXGroup;
+			children = (
+				C0B2C35A2059872F00E22E4D /* AppDelegate.swift */,
+				C0B2C35C2059872F00E22E4D /* ViewController.swift */,
+				C0B2C35E2059872F00E22E4D /* Main.storyboard */,
+				C0B2C3612059872F00E22E4D /* Assets.xcassets */,
+				C0B2C3632059872F00E22E4D /* LaunchScreen.storyboard */,
+				C0B2C3662059872F00E22E4D /* Info.plist */,
+			);
+			path = DissTracker;
+			sourceTree = "<group>";
+		};
+		C0B2C36D2059872F00E22E4D /* DissTracker WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				C0B2C36E2059872F00E22E4D /* Interface.storyboard */,
+				C0B2C3712059872F00E22E4D /* Assets.xcassets */,
+				C0B2C3732059872F00E22E4D /* Info.plist */,
+			);
+			path = "DissTracker WatchKit App";
+			sourceTree = "<group>";
+		};
+		C0B2C37C2059872F00E22E4D /* DissTracker WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C0B2C37D2059872F00E22E4D /* InterfaceController.swift */,
+				C0B2C37F2059872F00E22E4D /* ExtensionDelegate.swift */,
+				C0B2C3812059872F00E22E4D /* NotificationController.swift */,
+				C0B2C3832059872F00E22E4D /* Assets.xcassets */,
+				C0B2C3852059872F00E22E4D /* Info.plist */,
+				C0B2C3862059872F00E22E4D /* PushNotificationPayload.apns */,
+			);
+			path = "DissTracker WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0B2C3562059872F00E22E4D /* DissTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B2C3912059872F00E22E4D /* Build configuration list for PBXNativeTarget "DissTracker" */;
+			buildPhases = (
+				C0B2C3532059872F00E22E4D /* Sources */,
+				C0B2C3542059872F00E22E4D /* Frameworks */,
+				C0B2C3552059872F00E22E4D /* Resources */,
+				C0B2C3902059872F00E22E4D /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0B2C36C2059872F00E22E4D /* PBXTargetDependency */,
+			);
+			name = DissTracker;
+			productName = DissTracker;
+			productReference = C0B2C3572059872F00E22E4D /* DissTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C0B2C3682059872F00E22E4D /* DissTracker WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B2C38D2059872F00E22E4D /* Build configuration list for PBXNativeTarget "DissTracker WatchKit App" */;
+			buildPhases = (
+				C0B2C3672059872F00E22E4D /* Resources */,
+				C0B2C38C2059872F00E22E4D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0B2C37B2059872F00E22E4D /* PBXTargetDependency */,
+			);
+			name = "DissTracker WatchKit App";
+			productName = "DissTracker WatchKit App";
+			productReference = C0B2C3692059872F00E22E4D /* DissTracker WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C0B2C3772059872F00E22E4D /* DissTracker WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B2C3892059872F00E22E4D /* Build configuration list for PBXNativeTarget "DissTracker WatchKit Extension" */;
+			buildPhases = (
+				C0B2C3742059872F00E22E4D /* Sources */,
+				C0B2C3752059872F00E22E4D /* Frameworks */,
+				C0B2C3762059872F00E22E4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DissTracker WatchKit Extension";
+			productName = "DissTracker WatchKit Extension";
+			productReference = C0B2C3782059872F00E22E4D /* DissTracker WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0B2C34F2059872F00E22E4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Seth Kurkowski";
+				TargetAttributes = {
+					C0B2C3562059872F00E22E4D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C0B2C3682059872F00E22E4D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C0B2C3772059872F00E22E4D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C0B2C3522059872F00E22E4D /* Build configuration list for PBXProject "DissTracker" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C0B2C34E2059872F00E22E4D;
+			productRefGroup = C0B2C3582059872F00E22E4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0B2C3562059872F00E22E4D /* DissTracker */,
+				C0B2C3682059872F00E22E4D /* DissTracker WatchKit App */,
+				C0B2C3772059872F00E22E4D /* DissTracker WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0B2C3552059872F00E22E4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B2C3652059872F00E22E4D /* LaunchScreen.storyboard in Resources */,
+				C0B2C3622059872F00E22E4D /* Assets.xcassets in Resources */,
+				C0B2C3602059872F00E22E4D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B2C3672059872F00E22E4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B2C3722059872F00E22E4D /* Assets.xcassets in Resources */,
+				C0B2C3702059872F00E22E4D /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B2C3762059872F00E22E4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B2C3842059872F00E22E4D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0B2C3532059872F00E22E4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B2C35D2059872F00E22E4D /* ViewController.swift in Sources */,
+				C0B2C35B2059872F00E22E4D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B2C3742059872F00E22E4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B2C3822059872F00E22E4D /* NotificationController.swift in Sources */,
+				C0B2C3802059872F00E22E4D /* ExtensionDelegate.swift in Sources */,
+				C0B2C37E2059872F00E22E4D /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0B2C36C2059872F00E22E4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0B2C3682059872F00E22E4D /* DissTracker WatchKit App */;
+			targetProxy = C0B2C36B2059872F00E22E4D /* PBXContainerItemProxy */;
+		};
+		C0B2C37B2059872F00E22E4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0B2C3772059872F00E22E4D /* DissTracker WatchKit Extension */;
+			targetProxy = C0B2C37A2059872F00E22E4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C0B2C35E2059872F00E22E4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0B2C35F2059872F00E22E4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C0B2C3632059872F00E22E4D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0B2C3642059872F00E22E4D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C0B2C36E2059872F00E22E4D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0B2C36F2059872F00E22E4D /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0B2C3872059872F00E22E4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C0B2C3882059872F00E22E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0B2C38A2059872F00E22E4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL2U9TNTMV;
+				INFOPLIST_FILE = "DissTracker WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KurkowskiSeth.DissTracker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		C0B2C38B2059872F00E22E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL2U9TNTMV;
+				INFOPLIST_FILE = "DissTracker WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KurkowskiSeth.DissTracker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		C0B2C38E2059872F00E22E4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL2U9TNTMV;
+				IBSC_MODULE = DissTracker_WatchKit_Extension;
+				INFOPLIST_FILE = "DissTracker WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KurkowskiSeth.DissTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		C0B2C38F2059872F00E22E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL2U9TNTMV;
+				IBSC_MODULE = DissTracker_WatchKit_Extension;
+				INFOPLIST_FILE = "DissTracker WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KurkowskiSeth.DissTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		C0B2C3922059872F00E22E4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL2U9TNTMV;
+				INFOPLIST_FILE = DissTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KurkowskiSeth.DissTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0B2C3932059872F00E22E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL2U9TNTMV;
+				INFOPLIST_FILE = DissTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KurkowskiSeth.DissTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0B2C3522059872F00E22E4D /* Build configuration list for PBXProject "DissTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0B2C3872059872F00E22E4D /* Debug */,
+				C0B2C3882059872F00E22E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0B2C3892059872F00E22E4D /* Build configuration list for PBXNativeTarget "DissTracker WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0B2C38A2059872F00E22E4D /* Debug */,
+				C0B2C38B2059872F00E22E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0B2C38D2059872F00E22E4D /* Build configuration list for PBXNativeTarget "DissTracker WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0B2C38E2059872F00E22E4D /* Debug */,
+				C0B2C38F2059872F00E22E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0B2C3912059872F00E22E4D /* Build configuration list for PBXNativeTarget "DissTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0B2C3922059872F00E22E4D /* Debug */,
+				C0B2C3932059872F00E22E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0B2C34F2059872F00E22E4D /* Project object */;
+}
