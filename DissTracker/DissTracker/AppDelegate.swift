@@ -23,8 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    let staticStrings = strings()
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -67,7 +65,20 @@ extension AppDelegate: WCSessionDelegate {
     }
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         DispatchQueue.main.async {
-            if (message[staticStrings.wcsession_message_name] as? Bool) != nil {
+            if (message[StaticStrings.wcsession_message_name] as? Bool) != nil {
+                let totalDissesReceived = UserDefaults.standard.integer(forKey: StaticStrings.total_disses_recieved)
+                let totalDissesServed = UserDefaults.standard.integer(forKey: StaticStrings.total_disses_served)
+                if (UserDefaults.standard.string(forKey: StaticStrings.download_date)) != nil {
+                    print("no download date")
+                } else {
+                    print("WAT")
+                }
+                
+                let package = WatchDataPackage(_totalReceived: totalDissesReceived, _totalServed: totalDissesServed)
+                NSKeyedArchiver.setClassName(StaticStrings.archiever_class_name, for: WatchDataPackage.self)
+                let data = NSKeyedArchiver.archivedData(withRootObject: package)
+                
+                replyHandler([StaticStrings.watch_kit_package: data])
                 
             }
         }

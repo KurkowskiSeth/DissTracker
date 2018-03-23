@@ -45,15 +45,26 @@
         <!--Interface Controller-->
         <scene sceneID="Xvw-W6-kkf">
             <objects>
-                <controller id="0aO-zr-9Vc">
+                <controller id="0aO-zr-9Vc" customClass="InterfaceController" customModule="DissTracker_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Total" id="TRN-QC-bIz"/>
                         <label alignment="left" text="0" id="cUl-ru-P3q"/>
                         <button width="1" alignment="left" title="Diss Received" id="jdL-0d-OlQ"/>
                     </items>
+                    <connections>
+                        <outlet property="totalReceivedLbl" destination="cUl-ru-P3q" id="bKd-OC-cw3"/>
+                        <segue destination="3gh-HH-A06" kind="relationship" relationship="nextPage" id="MZ3-hB-BvD"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="F3C-A9-JfK">
+            <objects>
+                <controller id="3gh-HH-A06"/>
+            </objects>
+            <point key="canvasLocation" x="724" y="345"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">

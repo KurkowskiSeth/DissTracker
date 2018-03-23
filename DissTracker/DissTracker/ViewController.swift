@@ -30,17 +30,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var receivedYearly_NUM: UILabel!
     
     //Member variables
-    let staticStrings = strings()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         updateServedHeader()
+        updateReceivedHeader()
     }
     
     func updateServedHeader() {
-        if let totalServed = UserDefaults.standard.object(forKey: staticStrings.total_disses_served) as? Int {
+        if let totalServed = UserDefaults.standard.object(forKey: StaticStrings.total_disses_served) as? Int {
             servedTotal_NUM.text = totalServed.description
             servedDaily_NUM.text = (totalServed / 365).description
             servedMonthly_NUM.text = (totalServed / 30).description
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     }
     
     func updateReceivedHeader() {
-        if let totalReceived = UserDefaults.standard.object(forKey: staticStrings.total_disses_recieved) as? Int {
+        if let totalReceived = UserDefaults.standard.object(forKey: StaticStrings.total_disses_recieved) as? Int {
             receivedTotal_NUM.text = totalReceived.description
             receivedDaily_NUM.text = (totalReceived / 365).description
             receivedMonthly_NUM.text = (totalReceived / 30).description
@@ -58,21 +58,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func DissServed(_ sender: UIButton) {
-        if let totalServed = UserDefaults.standard.object(forKey: staticStrings.total_disses_served) as? Int {
+        if let totalServed = UserDefaults.standard.object(forKey: StaticStrings.total_disses_served) as? Int {
             let newTotal = totalServed + 1
-            UserDefaults.standard.set(newTotal, forKey: staticStrings.total_disses_served)
+            UserDefaults.standard.set(newTotal, forKey: StaticStrings.total_disses_served)
         } else {
-            UserDefaults.standard.set(1, forKey: staticStrings.total_disses_served)
+            UserDefaults.standard.set(1, forKey: StaticStrings.total_disses_served)
         }
         updateServedHeader()
     }
     
     @IBAction func DissRecieved(_ sender: UIButton) {
-        if let totalReceived = UserDefaults.standard.object(forKey: staticStrings.total_disses_recieved) as? Int {
+        if let totalReceived = UserDefaults.standard.object(forKey: StaticStrings.total_disses_recieved) as? Int {
             let newTotal = totalReceived + 1
-            UserDefaults.standard.set(newTotal, forKey: staticStrings.total_disses_recieved)
+            UserDefaults.standard.set(newTotal, forKey: StaticStrings.total_disses_recieved)
         } else {
-            UserDefaults.standard.set(1, forKey: staticStrings.total_disses_recieved)
+            UserDefaults.standard.set(1, forKey: StaticStrings.total_disses_recieved)
         }
         updateReceivedHeader()
     }

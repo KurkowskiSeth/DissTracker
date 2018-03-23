@@ -7,8 +7,12 @@
 //
 
 import Foundation
-class strings {
-    let total_disses_served = "total_disses_served"
-    let total_disses_recieved = "total_disses_recieved"
-    let wcsession_message_name = "wcsession_message_name"
+class StaticStrings {
+    static let total_disses_served = "total_disses_served"
+    static let total_disses_recieved = "total_disses_recieved"
+    static let total_days_since_download = "total_days_since_download"
+    static let download_date = "download_date"
+    static let wcsession_message_name = "wcsession_message_name"
+    static let watch_kit_package = "watch_kit_package"
+    static let archiever_class_name = "WatchDataPackage"
 }
