@@ -65,7 +65,7 @@ extension AppDelegate: WCSessionDelegate {
     }
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         DispatchQueue.main.async {
-            if (message[StaticStrings.wcsession_message_name] as? Bool) != nil {
+            if (message[StaticStrings.wcsession_msg_name_to_watch] as? Bool) != nil {
                 let totalDissesReceived = UserDefaults.standard.integer(forKey: StaticStrings.total_disses_recieved)
                 let totalDissesServed = UserDefaults.standard.integer(forKey: StaticStrings.total_disses_served)
                 if (UserDefaults.standard.string(forKey: StaticStrings.download_date)) != nil {
@@ -80,6 +80,19 @@ extension AppDelegate: WCSessionDelegate {
                 
                 replyHandler([StaticStrings.watch_kit_package: data])
                 
+            }
+        }
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        DispatchQueue.main.async {
+            if (message[StaticStrings.wcsession_msg_name_to_phone] as? Bool) != nil {
+                if let newTotalServed = message[StaticStrings.total_disses_served] as? Int {
+                    UserDefaults.standard.set(newTotalServed, forKey: StaticStrings.total_disses_served)
+                }
+                if let newTotalReceived = message[StaticStrings.total_disses_recieved] as? Int {
+                    UserDefaults.standard.set(newTotalReceived, forKey: StaticStrings.total_disses_recieved)
+                }
             }
         }
     }

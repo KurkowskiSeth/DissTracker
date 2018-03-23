@@ -12,7 +12,8 @@ class StaticStrings {
     static let total_disses_recieved = "total_disses_recieved"
     static let total_days_since_download = "total_days_since_download"
     static let download_date = "download_date"
-    static let wcsession_message_name = "wcsession_message_name"
+    static let wcsession_msg_name_to_watch = "wcsession_msg_name_to_watch"
+    static let wcsession_msg_name_to_phone = "wcsession_msg_name_to_phone"
     static let watch_kit_package = "watch_kit_package"
     static let archiever_class_name = "WatchDataPackage"
 }

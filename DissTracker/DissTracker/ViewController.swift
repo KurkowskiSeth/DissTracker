@@ -34,7 +34,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        let currentDate = dateFormatter.string(from: date)
+        print(currentDate)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         updateServedHeader()
         updateReceivedHeader()
     }

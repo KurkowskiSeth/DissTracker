@@ -16,7 +16,11 @@
                     <items>
                         <label alignment="left" text="Total" textAlignment="center" id="f6V-Jf-HdQ"/>
                         <label alignment="left" text="0" textAlignment="center" id="rld-sm-Cqd"/>
-                        <button width="1" alignment="left" title="Diss Served" id="2my-0q-Qp5"/>
+                        <button width="1" alignment="left" title="Diss Served" id="2my-0q-Qp5">
+                            <connections>
+                                <action selector="addDissServed" destination="AgC-eL-Hgc" id="WoR-av-5fd"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="totalServedLbl" destination="rld-sm-Cqd" id="eSq-Y0-e4h"/>
@@ -49,7 +53,11 @@
                     <items>
                         <label alignment="left" text="Total" id="TRN-QC-bIz"/>
                         <label alignment="left" text="0" id="cUl-ru-P3q"/>
-                        <button width="1" alignment="left" title="Diss Received" id="jdL-0d-OlQ"/>
+                        <button width="1" alignment="left" title="Diss Received" id="jdL-0d-OlQ">
+                            <connections>
+                                <action selector="addDissReceived" destination="0aO-zr-9Vc" id="SOf-wL-tNB"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="totalReceivedLbl" destination="cUl-ru-P3q" id="bKd-OC-cw3"/>

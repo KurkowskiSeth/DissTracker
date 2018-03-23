@@ -23,6 +23,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     var dataPackage: WatchDataPackage?
     
+    var totalServed = 0
+    var totalReceived = 0
+    
     override init() {
         super.init()
         
@@ -34,17 +37,20 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-        if let totalServed = UserDefaults.standard.object(forKey: StaticStrings.total_disses_served) as? Int {
-            print(totalServed.description)
-            totalServedLbl.setText(totalServed.description)
-        }
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        //Get current date
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        let currentDate = dateFormatter.string(from: date)
+        print(currentDate)
         
-        let packageMessage: [String: Any] = [StaticStrings.wcsession_message_name: true]
+        //Get user defaults from phone
+        let packageMessage: [String: Any] = [StaticStrings.wcsession_msg_name_to_watch: true]
         if let session = session, session.isReachable {
             session.sendMessage(packageMessage, replyHandler: { (replyData) in
                 DispatchQueue.main.async {
@@ -52,6 +58,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                         NSKeyedUnarchiver.setClass(WatchDataPackage.self, forClassName: StaticStrings.archiever_class_name)
                         if let package = NSKeyedUnarchiver.unarchiveObject(with: data) as? WatchDataPackage {
                             self.dataPackage = package
+                            self.totalServed = (self.dataPackage?.mTotalServed)!
+                            self.totalReceived = (self.dataPackage?.mTotalReceived)!
                             if (self.totalServedLbl != nil) {
                                 self.totalServedLbl.setText(self.dataPackage?.mTotalServed?.description)
                             }
@@ -69,5 +77,23 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
+    @IBAction func addDissServed() {
+        totalServed += 1
+        totalServedLbl.setText(totalServed.description)
+        saveToPhone()
+    }
+    
+    @IBAction func addDissReceived() {
+        totalReceived += 1
+        totalReceivedLbl.setText(totalReceived.description)
+        saveToPhone()
+    }
+    
+    func saveToPhone() {
+        let saveMessage: [String : Any] = [StaticStrings.wcsession_msg_name_to_phone: true, StaticStrings.total_disses_recieved: totalReceived, StaticStrings.total_disses_served: totalServed]
+        if let session = session, session.isReachable {
+            session.sendMessage(saveMessage, replyHandler: nil, errorHandler: nil)
+        }
+    }
 }
