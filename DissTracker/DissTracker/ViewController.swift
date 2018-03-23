@@ -37,9 +37,23 @@ class ViewController: UIViewController {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
-        let currentDate = dateFormatter.string(from: date)
-        print(currentDate)
+        let currentDateString = "12.03.2018"//dateFormatter.string(from: date)
+        print(currentDateString)
         
+        if (UserDefaults.standard.string(forKey: StaticStrings.download_date)) == nil {
+            UserDefaults.standard.set(currentDateString, forKey: StaticStrings.download_date)
+        }
+        if let downloadDateString = UserDefaults.standard.string(forKey: StaticStrings.download_date) {
+            let downloadDate = dateFormatter.date(from: downloadDateString)
+            let currentDate = dateFormatter.date(from: currentDateString)
+            
+            let calendar = Calendar.current
+            let dayDiff = calendar.dateComponents([.day], from: currentDate!, to: downloadDate!).day
+            print(dayDiff!.description)
+            if dayDiff! >= 0 {
+                UserDefaults.standard.set(dayDiff, forKey: StaticStrings.total_days_since_download)
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,20 +62,30 @@ class ViewController: UIViewController {
     }
     
     func updateServedHeader() {
-        if let totalServed = UserDefaults.standard.object(forKey: StaticStrings.total_disses_served) as? Int {
-            servedTotal_NUM.text = totalServed.description
-            servedDaily_NUM.text = (totalServed / 365).description
-            servedMonthly_NUM.text = (totalServed / 30).description
-            servedYearly_NUM.text = ((totalServed / 30) * 12).description
+        if let totalServed = UserDefaults.standard.object(forKey: StaticStrings.total_disses_served) as? Float, let totalDays = UserDefaults.standard.object(forKey: StaticStrings.total_days_since_download) as? Float {
+            var totalDaysToDivideWith = totalDays
+            if totalDays == 0 {
+                totalDaysToDivideWith = 1
+            }
+            
+            servedTotal_NUM.text = String(format: "%.0f", totalServed)
+            servedDaily_NUM.text = String(format: "%.2f", (totalServed / totalDaysToDivideWith))
+            servedMonthly_NUM.text = String(format: "%.2f", (totalServed / totalDaysToDivideWith) * 30)
+            servedYearly_NUM.text = String(format: "%.2f", (totalServed / totalDaysToDivideWith) * 365)
         }
     }
     
     func updateReceivedHeader() {
-        if let totalReceived = UserDefaults.standard.object(forKey: StaticStrings.total_disses_recieved) as? Int {
-            receivedTotal_NUM.text = totalReceived.description
-            receivedDaily_NUM.text = (totalReceived / 365).description
-            receivedMonthly_NUM.text = (totalReceived / 30).description
-            receivedYearly_NUM.text = ((totalReceived / 30) * 12).description
+        if let totalReceived = UserDefaults.standard.object(forKey: StaticStrings.total_disses_recieved) as? Float, let totalDays = UserDefaults.standard.object(forKey: StaticStrings.total_days_since_download) as? Float {
+            var totalDaysToDivideWith = totalDays
+            if totalDays == 0 {
+                totalDaysToDivideWith = 1
+            }
+            
+            receivedTotal_NUM.text = String(format: "%.0f", totalReceived)
+            receivedDaily_NUM.text = String(format: "%.2f", (totalReceived / totalDaysToDivideWith))
+            receivedMonthly_NUM.text = String(format:"%.2f", (totalReceived / totalDaysToDivideWith) * 30)
+            receivedYearly_NUM.text = String(format:"%.2f", (totalReceived / totalDaysToDivideWith) * 365)
         }
     }
 
