@@ -33,27 +33,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
-        let currentDateString = "12.03.2018"//dateFormatter.string(from: date)
-        print(currentDateString)
-        
-        if (UserDefaults.standard.string(forKey: StaticStrings.download_date)) == nil {
-            UserDefaults.standard.set(currentDateString, forKey: StaticStrings.download_date)
-        }
-        if let downloadDateString = UserDefaults.standard.string(forKey: StaticStrings.download_date) {
-            let downloadDate = dateFormatter.date(from: downloadDateString)
-            let currentDate = dateFormatter.date(from: currentDateString)
-            
-            let calendar = Calendar.current
-            let dayDiff = calendar.dateComponents([.day], from: currentDate!, to: downloadDate!).day
-            print(dayDiff!.description)
-            if dayDiff! >= 0 {
-                UserDefaults.standard.set(dayDiff, forKey: StaticStrings.total_days_since_download)
-            }
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

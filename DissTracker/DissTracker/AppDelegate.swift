@@ -66,18 +66,41 @@ extension AppDelegate: WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         DispatchQueue.main.async {
             if (message[StaticStrings.wcsession_msg_name_to_watch] as? Bool) != nil {
+                //Get totals
                 let totalDissesReceived = UserDefaults.standard.integer(forKey: StaticStrings.total_disses_recieved)
                 let totalDissesServed = UserDefaults.standard.integer(forKey: StaticStrings.total_disses_served)
-                if (UserDefaults.standard.string(forKey: StaticStrings.download_date)) != nil {
-                    print("no download date")
-                } else {
-                    print("WAT")
-                }
                 
-                let package = WatchDataPackage(_totalReceived: totalDissesReceived, _totalServed: totalDissesServed)
+                //Get number of days for averages
+                let date = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd.MM.yyyy"
+                
+                //MARK: -Switch this variables to check averages
+//                let currentDateString = dateFormatter.string(from: date)
+                let currentDateString = "12.03.2018"
+                
+                if (UserDefaults.standard.string(forKey: StaticStrings.download_date)) == nil {
+                    UserDefaults.standard.set(currentDateString, forKey: StaticStrings.download_date)
+                }
+                if let downloadDateString = UserDefaults.standard.string(forKey: StaticStrings.download_date) {
+                    let downloadDate = dateFormatter.date(from: downloadDateString)
+                    let currentDate = dateFormatter.date(from: currentDateString)
+                    
+                    let calendar = Calendar.current
+                    let dayDiff = calendar.dateComponents([.day], from: currentDate!, to: downloadDate!).day
+                    print(dayDiff!.description)
+                    if dayDiff! >= 0 {
+                        UserDefaults.standard.set(dayDiff, forKey: StaticStrings.total_days_since_download)
+                    }
+                }
+                let totalDaysSinceDownload = UserDefaults.standard.integer(forKey: StaticStrings.total_days_since_download)
+                
+                //Get data ready to be sent
+                let package = WatchDataPackage(_totalReceived: totalDissesReceived, _totalServed: totalDissesServed, _totalDays: totalDaysSinceDownload)
                 NSKeyedArchiver.setClassName(StaticStrings.archiever_class_name, for: WatchDataPackage.self)
                 let data = NSKeyedArchiver.archivedData(withRootObject: package)
                 
+                //Send data package
                 replyHandler([StaticStrings.watch_kit_package: data])
                 
             }

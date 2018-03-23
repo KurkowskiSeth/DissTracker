@@ -14,15 +14,26 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DissTracker_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <label width="1" alignment="left" text="Disses Served" textAlignment="center" id="ylf-ue-Ps2"/>
                         <label alignment="left" text="Total" textAlignment="center" id="f6V-Jf-HdQ"/>
-                        <label alignment="left" text="0" textAlignment="center" id="rld-sm-Cqd"/>
-                        <button width="1" alignment="left" title="Diss Served" id="2my-0q-Qp5">
+                        <label alignment="left" text="--" textAlignment="center" id="rld-sm-Cqd"/>
+                        <button width="1" alignment="left" title="Diss Served" enabled="NO" id="2my-0q-Qp5">
                             <connections>
                                 <action selector="addDissServed" destination="AgC-eL-Hgc" id="WoR-av-5fd"/>
                             </connections>
                         </button>
+                        <label width="1" alignment="left" text="Daily Average" textAlignment="center" id="obY-ib-fDl"/>
+                        <label alignment="left" text="--" id="e0Y-Ai-kJv"/>
+                        <label width="1" alignment="left" text="Monthly Average" textAlignment="center" id="mij-we-OBC"/>
+                        <label alignment="left" text="--" id="eBk-SO-JXm"/>
+                        <label width="1" alignment="left" text="Yearly Average" textAlignment="center" id="AkE-MT-MAq"/>
+                        <label alignment="left" text="--" id="3rw-av-X5J"/>
                     </items>
                     <connections>
+                        <outlet property="avgServedDailyLbl" destination="e0Y-Ai-kJv" id="SGq-vC-0O2"/>
+                        <outlet property="avgServedMonthlyLbl" destination="eBk-SO-JXm" id="aFE-9j-Z21"/>
+                        <outlet property="avgServedYearlyLbl" destination="3rw-av-X5J" id="XO2-o7-imU"/>
+                        <outlet property="dissServedBtn" destination="2my-0q-Qp5" id="LWf-FY-INE"/>
                         <outlet property="totalServedLbl" destination="rld-sm-Cqd" id="eSq-Y0-e4h"/>
                         <segue destination="0aO-zr-9Vc" kind="relationship" relationship="nextPage" id="uzF-10-QKo"/>
                     </connections>
@@ -51,28 +62,31 @@
             <objects>
                 <controller id="0aO-zr-9Vc" customClass="InterfaceController" customModule="DissTracker_WatchKit_Extension">
                     <items>
+                        <label width="1" alignment="left" text="Disses Received" textAlignment="center" id="BmA-Ix-uem"/>
                         <label alignment="left" text="Total" id="TRN-QC-bIz"/>
-                        <label alignment="left" text="0" id="cUl-ru-P3q"/>
-                        <button width="1" alignment="left" title="Diss Received" id="jdL-0d-OlQ">
+                        <label alignment="left" text="--" id="cUl-ru-P3q"/>
+                        <button width="1" alignment="left" title="Diss Received" enabled="NO" id="jdL-0d-OlQ">
                             <connections>
                                 <action selector="addDissReceived" destination="0aO-zr-9Vc" id="SOf-wL-tNB"/>
                             </connections>
                         </button>
+                        <label width="1" alignment="left" text="Daily Average" textAlignment="center" id="V0B-xO-Bl4"/>
+                        <label alignment="left" text="--" id="wjl-hi-3Y0"/>
+                        <label width="1" alignment="left" text="Monthly Average" textAlignment="center" id="7S7-Vu-gzy"/>
+                        <label alignment="left" text="--" id="WIw-qi-Glf"/>
+                        <label width="1" alignment="left" text="Yearly Average" textAlignment="center" id="mDB-eP-HyZ"/>
+                        <label alignment="left" text="--" id="qQJ-TQ-6lj"/>
                     </items>
                     <connections>
+                        <outlet property="avgReceivedDailyLbl" destination="wjl-hi-3Y0" id="DR7-mT-MHL"/>
+                        <outlet property="avgReceivedMonthlyLbl" destination="WIw-qi-Glf" id="HX0-vY-hRR"/>
+                        <outlet property="avgReceivedYearlyLbl" destination="qQJ-TQ-6lj" id="Yhw-Pf-DkI"/>
+                        <outlet property="dissReceivedBtn" destination="jdL-0d-OlQ" id="1z7-j5-8ox"/>
                         <outlet property="totalReceivedLbl" destination="cUl-ru-P3q" id="bKd-OC-cw3"/>
-                        <segue destination="3gh-HH-A06" kind="relationship" relationship="nextPage" id="MZ3-hB-BvD"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="F3C-A9-JfK">
-            <objects>
-                <controller id="3gh-HH-A06"/>
-            </objects>
-            <point key="canvasLocation" x="724" y="345"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
