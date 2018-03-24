@@ -24,6 +24,10 @@
 		C0B2C396205993E100E22E4D /* StringFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2C394205993E100E22E4D /* StringFile.swift */; };
 		C0CB24B52064449700CD8222 /* WatchDataPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CB24B42064449700CD8222 /* WatchDataPackage.swift */; };
 		C0D75C642064699C00337CFE /* WatchDataPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CB24B42064449700CD8222 /* WatchDataPackage.swift */; };
+		C0D75C6A2065C44200337CFE /* 2SAD4ME.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0D75C692065C44200337CFE /* 2SAD4ME.mp3 */; };
+		C0D75C6B2065C44200337CFE /* 2SAD4ME.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0D75C692065C44200337CFE /* 2SAD4ME.mp3 */; };
+		C0D75C6D2065C82800337CFE /* TO BE CONTINUED.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0D75C6C2065C82800337CFE /* TO BE CONTINUED.mp3 */; };
+		C0D75C6E2065C82800337CFE /* TO BE CONTINUED.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0D75C6C2065C82800337CFE /* TO BE CONTINUED.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +93,8 @@
 		C0B2C3862059872F00E22E4D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		C0B2C394205993E100E22E4D /* StringFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFile.swift; sourceTree = "<group>"; };
 		C0CB24B42064449700CD8222 /* WatchDataPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDataPackage.swift; sourceTree = "<group>"; };
+		C0D75C692065C44200337CFE /* 2SAD4ME.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2SAD4ME.mp3; sourceTree = "<group>"; };
+		C0D75C6C2065C82800337CFE /* TO BE CONTINUED.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "TO BE CONTINUED.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 		C0B2C3592059872F00E22E4D /* DissTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C0D75C682065C43000337CFE /* Sounds */,
 				C0B2C35A2059872F00E22E4D /* AppDelegate.swift */,
 				C0B2C35C2059872F00E22E4D /* ViewController.swift */,
 				C0B2C35E2059872F00E22E4D /* Main.storyboard */,
@@ -165,6 +172,15 @@
 				C0B2C3862059872F00E22E4D /* PushNotificationPayload.apns */,
 			);
 			path = "DissTracker WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		C0D75C682065C43000337CFE /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C0D75C692065C44200337CFE /* 2SAD4ME.mp3 */,
+				C0D75C6C2065C82800337CFE /* TO BE CONTINUED.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B2C3652059872F00E22E4D /* LaunchScreen.storyboard in Resources */,
+				C0D75C6A2065C44200337CFE /* 2SAD4ME.mp3 in Resources */,
 				C0B2C3622059872F00E22E4D /* Assets.xcassets in Resources */,
+				C0D75C6D2065C82800337CFE /* TO BE CONTINUED.mp3 in Resources */,
 				C0B2C3602059872F00E22E4D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +310,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B2C3842059872F00E22E4D /* Assets.xcassets in Resources */,
+				C0D75C6B2065C44200337CFE /* 2SAD4ME.mp3 in Resources */,
+				C0D75C6E2065C82800337CFE /* TO BE CONTINUED.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

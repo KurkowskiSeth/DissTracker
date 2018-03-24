@@ -77,12 +77,12 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jr1-Sr-2lj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jr1-Sr-2lj">
                                 <rect key="frame" x="64" y="69" width="247" height="247"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jr1-Sr-2lj" secondAttribute="height" multiplier="1:1" id="0iA-r6-bXZ"/>
                                 </constraints>
-                                <state key="normal" title="Diss Served"/>
+                                <state key="normal" image="Diss_Served_Btn"/>
                                 <connections>
                                     <action selector="DissServed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IXU-Xe-sht"/>
                                 </connections>
@@ -116,9 +116,9 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSW-iW-KZm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSW-iW-KZm">
                                 <rect key="frame" x="64" y="385" width="247" height="247"/>
-                                <state key="normal" title="Diss Received"/>
+                                <state key="normal" image="Diss_Received_Btn"/>
                                 <connections>
                                     <action selector="DissRecieved:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpj-OD-TDq"/>
                                 </connections>
@@ -201,4 +201,8 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Diss_Received_Btn" width="330" height="330"/>
+        <image name="Diss_Served_Btn" width="330" height="330"/>
+    </resources>
 </document>

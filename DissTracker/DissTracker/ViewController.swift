@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var receivedYearly_NUM: UILabel!
     
     //Member variables
+    var audioPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +71,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func DissServed(_ sender: UIButton) {
+        let audioFilePath = Bundle.main.path(forResource: "TO BE CONTINUED", ofType: "mp3")
+        if audioFilePath != nil {
+            let audioFileUrl = URL.init(fileURLWithPath: audioFilePath!)
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: audioFileUrl)
+                audioPlayer.play()
+            } catch {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("to be continued file not found")
+        }
         if let totalServed = UserDefaults.standard.object(forKey: StaticStrings.total_disses_served) as? Int {
             let newTotal = totalServed + 1
             UserDefaults.standard.set(newTotal, forKey: StaticStrings.total_disses_served)
@@ -79,6 +93,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func DissRecieved(_ sender: UIButton) {
+        let audioFilePath = Bundle.main.path(forResource: "2SAD4ME", ofType: "mp3")
+        if audioFilePath != nil {
+            let audioFileUrl = URL.init(fileURLWithPath: audioFilePath!)
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: audioFileUrl)
+                audioPlayer.play()
+            } catch {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("2 sad 4 me file not found")
+        }
         if let totalReceived = UserDefaults.standard.object(forKey: StaticStrings.total_disses_recieved) as? Int {
             let newTotal = totalReceived + 1
             UserDefaults.standard.set(newTotal, forKey: StaticStrings.total_disses_recieved)
